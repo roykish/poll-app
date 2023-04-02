@@ -62,7 +62,7 @@ public class PollController {
                Votes saved = votesRepository.save(votes);
                return new ResponseEntity<>(votes, HttpStatus.OK);
            }else{
-               return new ResponseEntity<>(votes, HttpStatus.TOO_MANY_REQUESTS);
+               return new ResponseEntity<>(votes, HttpStatus.NO_CONTENT);
            }
        }
        else {
